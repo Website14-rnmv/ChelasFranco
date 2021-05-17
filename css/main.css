@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.content-all {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  padding: 0 5%;
+  margin: 0;
+  z-index: 2;
+}
+
+nav .bloqueUno {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.boton {
+  font-size: 23px;
+  margin-right: 5%;
+  visibility: hidden;
+}
+
+nav .bloqueDos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .bloqueDos .list-uno {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+nav .bloqueDos .list-uno li {
+  margin: 0 10px;
+}
+
+nav .bloqueDos .list-uno li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  padding: 10px;
+}
+
+nav .bloqueDos .list-uno li a:hover {
+  color: #e4ac33;
+  transition: 0.5s;
+}
+
+nav .bloqueDos .list-dos {
+  display: flex;
+  align-items: center;
+}
+
+nav .bloqueDos .list-dos li {
+  margin: 0 5px;
+}
+
+nav .bloqueDos .list-dos a {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav .bloqueDos .list-dos a:hover {
+  color: #e4ac33;
+  transition: 0.5s;
+}
+
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.text-fondo {
+  position: absolute;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-fondo h1 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.text-fondo p {
+  color: #E0E0E0;
+  font-size: 18px;
+}
+
+.text-fondo .botones-fondo {
+  display: flex;
+  align-items: center;
+}
+
+.text-fondo .botones-fondo a {
+  margin: 20px 20px 0 0;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  background-color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.text-fondo .botones-fondo a:hover {
+  transition: 0.5s;
+  box-shadow: 0px -60px #e4ac33 inset;
+  color: black;
+  padding: 15px 25px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: black;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: none;
+  }
+
+  .bloqueUno {
+    padding: 0 5%;
+  }
+
+  .bloqueDos {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 20px;
+    position: relative;
+    top: 0px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .bloqueDos.show {
+    top: -500px;
+  }
+
+  .list-uno {
+    flex-direction: column;
+  }
+  .list-uno li {
+    padding: 5px;
+    color: white;
+  }
+
+  .list-dos {
+    margin: 10px 0 0 0;
+  }
+
+  nav .bloqueDos .list-uno li a {
+    color: white;
+  }
+
+  nav .bloqueDos .list-uno li a:hover {
+    background: none;
+    transition: 0.5s;
+    border-radius: none;
+    color: white;
+  }
+
+  nav .bloqueDos .list-dos a {
+    color: white;
+  }
+
+  .boton {
+    visibility: visible;
+  }
+  .boton i {
+    color: white;
+    font-size: 25px;
+  }
+}
+.text-fondo {
+  position: absolute;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-fondo h1 {
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+.text-fondo p {
+  color: #E0E0E0;
+  font-size: 18px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: black;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: none;
+    height: 40px;
+  }
+
+  .bloqueUno {
+    padding: 0 5%;
+  }
+  .bloqueUno img {
+    width: 100px;
+  }
+
+  .bloqueDos {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    background-color: none;
+    padding: 20px;
+    position: relative;
+    top: -5px;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.877);
+  }
+
+  .bloqueDos.show {
+    top: -500px;
+  }
+
+  .list-uno {
+    flex-direction: column;
+  }
+  .list-uno li {
+    padding: 5px;
+  }
+
+  .list-dos {
+    margin: 10px 0 0 0;
+  }
+
+  nav .bloqueDos .list-uno li a {
+    color: white;
+  }
+
+  nav .bloqueDos .list-uno li a:hover {
+    background: none;
+    transition: 0.5s;
+    border-radius: none;
+    color: black;
+  }
+
+  nav .bloqueDos .list-dos a {
+    color: white;
+  }
+
+  .boton {
+    visibility: visible;
+    position: relative;
+    top: -3px;
+  }
+  .boton i {
+    color: white;
+    font-size: 18px;
+  }
+
+  .text-fondo {
+    margin-top: 15%;
+    text-align: center;
+  }
+  .text-fondo h1 {
+    font-size: 18px;
+  }
+  .text-fondo p {
+    font-size: 9px;
+  }
+  .text-fondo a {
+    font-size: 8px;
+  }
+
+  .text-fondo .botones-fondo a {
+    margin: 10px 10px 0 0;
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+
+  .text-fondo .botones-fondo a:hover {
+    transition: 0.5s;
+    box-shadow: 0px -60px #e4ac33 inset;
+    color: black;
+    padding: 15px 25px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.css.map */
